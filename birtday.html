@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Syifa</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: "Poppins", sans-serif;
+        background: linear-gradient(135deg, #ffc0cb, #ffe4e1);
+        overflow-x: hidden;
+    }
+
+    /* Floating hearts */
+    .heart {
+        position: fixed;
+        top: -10px;
+        color: rgba(255, 105, 180, 0.85);
+        font-size: 20px;
+        animation: fall 7s linear infinite;
+        z-index: 9999;
+    }
+    @keyframes fall {
+        to { transform: translateY(110vh); opacity: 0; }
+    }
+
+    /* Card utama */
+    .card {
+        max-width: 480px;
+        margin: 80px auto;
+        background: rgba(255, 255, 255, 0.8);
+        padding: 25px;
+        border-radius: 22px;
+        text-align: center;
+        backdrop-filter: blur(8px);
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        animation: fadeIn 1.2s ease;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Foto */
+    .photo {
+        width: 170px;
+        height: 170px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid white;
+        box-shadow: 0 0 15px rgba(255, 105, 180, 0.7);
+        margin-bottom: 15px;
+        animation: glow 3s infinite alternate;
+    }
+
+    @keyframes glow {
+        from { box-shadow: 0 0 8px rgba(255,105,180,0.3); }
+        to   { box-shadow: 0 0 25px rgba(255,105,180,1); }
+    }
+
+    h1 {
+        font-size: 28px;
+        color: #d63384;
+        margin-bottom: 5px;
+    }
+
+    h3 {
+        color: #ff4fa3;
+        margin-top: 0;
+        font-weight: 500;
+    }
+
+    .letter {
+        margin-top: 18px;
+        font-size: 15px;
+        line-height: 1.6;
+        background: white;
+        padding: 18px;
+        border-radius: 15px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        text-align: left;
+    }
+
+    .button {
+        margin-top: 22px;
+        padding: 12px 22px;
+        background: #ff69b4;
+        color: white;
+        border: none;
+        border-radius: 12px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .button:hover {
+        background: #ff85c2;
+        transform: scale(1.05);
+    }
+</style>
+</head>
+
+<body>
+
+<!-- Floating hearts -->
+<script>
+    function createHeart() {
+        const heart = document.createElement("div");
+        heart.className = "heart";
+        heart.textContent = ❤️";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.fontSize = (20 + Math.random()*20) + "px";
+        heart.style.animationDuration = (4 + Math.random()*4) + "s";
+        document.body.appendChild(heart);
+        setTimeout(() => heart.remove(), 8000);
+    }
+    setInterval(createHeart, 450);
+</script>
+
+<!-- Musik -->
+<audio id="music" autoplay loop hidden>
+    <source src="https://drive.google.com/uc?export=download&id=1VyWCrt3rRufnMFRNGBACI3yQxiaoPUik" type="audio/mpeg">
+</audio>
+
+<div class="card">
+    <img class="photo" 
+         src="https://drive.google.com/uc?export=view&id=1rZ43WB3lVlo119kjZk59Ic_uXqame1bj">
+
+    <h1>Happy Birthday, Syifa 🎂✨</h1>
+    <h3>22 & Getting Cuter Every Year 💗</h3>
+
+    <div class="letter">
+        Hai Syifa, si cantik yang ulang tahun ke-22...  
+        <br><br>
+        Pertama-tama, selamat ulang tahun yaaa!  
+        Semoga semua hal baik yang kamu pikirkan langsung kejadian satu-satu.  
+        <br><br>
+        Aku cuma mau bilang…  
+        kamu itu lucu, cantik, kadang ngeselin (dikit),  
+        tapi entah kenapa bikin aku ketagihan buat sayang terus 😭💗  
+        <br><br>
+        Semoga kamu selalu bahagia, selalu sehat,  
+        dan selalu tetap jadi Syifa yang aku kenal—  
+        yang manis, ceria, dan kadang sok asik tapi gemesin.  
+        <br><br>
+        Pokoknya…  
+        <b>Selamat 22, bocil kesayanganku.</b>  
+        Jangan berubah ya — kecuali jadi lebih sayang aku 😌💖  
+    </div>
+
+    <button class="button" onclick="alert('I LOVE YOU, SYIFA ❤️✨')">
+        Klik kalau kamu sayang aku 😳👉👈
+    </button>
+</div>
+
+</body>
+</html>
